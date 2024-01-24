@@ -1,3 +1,6 @@
+const json = JSON.parse('products.json')
+console.log(json);
+
 let coffee = [
   {
     "name": "Irish coffee",
@@ -281,6 +284,9 @@ let coffee = [
 
 
 ]
+
+
+
 // Burger
 
 let burgerList = document.querySelectorAll('.burger_list')
@@ -328,14 +334,14 @@ let gridItem = document.querySelectorAll('.grid_item')
 let modal = document.getElementById('modal')
 gridItem.forEach(item => {
   item.addEventListener('click', () => {
-    modal.classList.add('modal_active')
+    modal_wrapper.classList.add('modal_active')
     document.body.classList.add('lock')
   });
 });
 
 function modalopen(e) {
   let img = Number(e.id) +1
-  modal.innerHTML = `
+  modal_wrapper.innerHTML = `
   <div class="modal"><img src="images/coffe/coffee-${img}.png" alt="">
                 <div class="modal_desc">
                     <div class="title_modal">
@@ -386,10 +392,13 @@ function modalopen(e) {
                         </div>`
 }
 
+
 function closeModal ( ) {
-  modal.classList.remove('modal_active');
+  modal_wrapper.classList.remove('modal_active');
   document.body.classList.remove('lock');
 }
-modal.addEventListener('click', (e) => {
-  console.log(e.target);
+modal_wrapper.addEventListener('click', (e) => {
+  if (e.target === modal_wrapper) closeModal()
+console.log(e.target);
+
 })
