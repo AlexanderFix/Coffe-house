@@ -202,6 +202,7 @@ nav a:visited {
     line-height: 150%;
     /* 24px */
     transition: 0.5s;
+   cursor: pointer;
 }
 
 .but_tabs p {
@@ -239,11 +240,16 @@ nav a:visited {
     color: #E1D4C9;
 }
 
-.grid {
+.grid{
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+}
+.grid_tea {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 

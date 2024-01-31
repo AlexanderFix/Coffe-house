@@ -7,6 +7,7 @@
     <title>Menu</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="icon" href="images/coffee-cup.svg">
 </head>
 
 <body>
@@ -121,17 +122,17 @@
 
                     <div class="tabs">
 
-                        <div class="but_tabs">
+                        <div class="but_tabs active" onclick="active_tubs(this, 'coffee')">
                             <div class="icon_tabs"><img src="images/Coffee.png" alt=""></div>
                             <p>Coffee</p>
                         </div>
 
-                        <div class="but_tabs">
+                        <div class="but_tabs" onclick="active_tubs(this, 'tea')">
                             <div class="icon_tabs"><img src="images/Tea.png" alt=""></div>
                             <p>Tea</p>
                         </div>
 
-                        <div class="but_tabs">
+                        <div class="but_tabs" onclick="active_tubs(this, 'dessert')">
                             <div class="icon_tabs"><img src="images/Dessert.png" alt=""></div>
                             <p>Dessert</p>
                         </div>
@@ -404,9 +405,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/menu.js">
-
-    </script>
+    <script src="js/menu.js">    </script>
 </body>
 
 </html>
